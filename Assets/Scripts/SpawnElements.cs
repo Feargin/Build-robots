@@ -14,7 +14,7 @@ namespace EnglishKids.BuildRobots
         public void Init()
         {
             ConveyorController.Instance.SetCountDetails(_roboDetails.Count - 1);
-            for (int point = 0; point < _spawnPointsDetails.Length; point++)
+            for (var point = 0; point < _spawnPointsDetails.Length; point++)
             {
                 var index = Random.Range(0, _roboDetails.Count - 1);
                 Spawn(point, index);
