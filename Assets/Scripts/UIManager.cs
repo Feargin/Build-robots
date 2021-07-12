@@ -5,7 +5,7 @@ namespace EnglishKids.BuildRobots
 {
     public sealed class UIManager : MonoBehaviour
     {
-        public GameObject InitialPanel { get; private set; }
+        private GameObject InitialPanel;
         private GameObject _lastPanel;
         [SerializeField] private GameObject _initialPanel;
 

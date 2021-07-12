@@ -5,20 +5,22 @@ namespace EnglishKids.BuildRobots
 {
     public sealed class DropHandler : MonoBehaviour, IDropHandler
     {
-        public static System.Action<DropHandler> CheckArrayDetails;
+        public static event System.Action<DropHandler> OnDropDetail;
         [SerializeField] private TypeDetails _type;
 
-        public bool IsFull { get; private set; } = false;
+        public bool IsEmpty { get; private set; } = true;
 
         public void OnDrop(PointerEventData eventData)
         {
-            if (IsFull) return;
+            if (!IsEmpty) return;
             var detail = DragHandler.DragDetail;
-            if (detail == null || detail.Type != _type) return;
+            if (detail == null || detail._detail.Type != _type) return;
             detail.transform.SetParent(transform);
+            
             ConveyorController.Instance.UpdateCountDetails();
-            IsFull = true;
-            CheckArrayDetails?.Invoke(this);
+            
+            IsEmpty = false;
+            OnDropDetail?.Invoke(this);
         }
     }
 }

@@ -13,8 +13,8 @@ namespace EnglishKids.BuildRobots
         [SerializeField] private GameObject _rectangle;
         [SerializeField] private int _indexSound;
 
-        private void OnDisable() => DropHandler.CheckArrayDetails -= CheckArrayDetails;
-        private void OnEnable() => DropHandler.CheckArrayDetails += CheckArrayDetails;
+        private void OnDisable() => DropHandler.OnDropDetail -= CheckArrayDetails;
+        private void OnEnable() => DropHandler.OnDropDetail += CheckArrayDetails;
 
         private void Start()
         {
@@ -31,7 +31,7 @@ namespace EnglishKids.BuildRobots
             AudioController.Instance.PlayAudioClipEffect(_indexSound, 2);
             for (var index = 0; index < _details.Length; index++)
             {
-                if (!_details[index].IsFull) return;
+                if (_details[index].IsEmpty) return;
                 if (index == _details.Length - 1) ChangeTemplateRobot();
             }
         }
@@ -40,10 +40,10 @@ namespace EnglishKids.BuildRobots
         {
             _template.SetActive(false);
             _completedRobot.SetActive(true);
-            int indexClip = (int) _type == 0 ? 8 : 10;
+            var indexClip = (int) _type == 0 ? 8 : 10;
             AudioController.Instance.PlayAudioClipEffect(indexClip, 1);
             AnimationsManager.Instance.RunStarsAnimationClip(transform.position);
-            DropHandler.CheckArrayDetails -= CheckArrayDetails;
+            DropHandler.OnDropDetail -= CheckArrayDetails;
         }
 
     }

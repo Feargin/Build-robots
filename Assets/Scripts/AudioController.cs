@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace EnglishKids.BuildRobots
 {
-    public class AudioController : Singleton<AudioController>
+    public sealed class AudioController : Singleton<AudioController>
     {
         [SerializeField] private AudioClip[] _audioClips;
         [SerializeField] private AudioSource[] _audioSources;

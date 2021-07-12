@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3865278406754594637}
   - component: {fileID: -271104238400305747}
   - component: {fileID: 5821332577177844786}
+  - component: {fileID: 7919925193031361003}
   m_Layer: 5
   m_Name: wheel
   m_TagString: Untagged
@@ -90,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e7457dcb4a33f41879a32d93552ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 8
+  _moveSpeed: 0
 --- !u!225 &5821332577177844786
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -103,6 +104,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7919925193031361003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622944120885957466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482cd8d4d33439847a8b8553710cfc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 8
 --- !u!1 &3337734904184307345
 GameObject:
   m_ObjectHideFlags: 0

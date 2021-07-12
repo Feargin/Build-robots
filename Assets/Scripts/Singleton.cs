@@ -1,31 +1,33 @@
 ﻿using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour where T:Component
+namespace EnglishKids.BuildRobots
 {
-	private static T _instance;
-	public static T Instance
+	public class Singleton<T> : MonoBehaviour where T : Component
 	{
-		get 
-		{ 
-			if(_instance == null)
-			{
-				Init();
-			}
-			return _instance; 
-		}
-		
-		private set 
-		{ 
-			_instance = value; 
-		}
-	}
-	
-	private static void Init()
-	{
-		_instance = FindObjectOfType<T>();
-		if(_instance == null)
+		private static T _instance;
+
+		public static T Instance
 		{
-			Debug.LogError("NULL");
+			get
+			{
+				if (_instance == null)
+				{
+					Init();
+				}
+
+				return _instance;
+			}
+
+			private set { _instance = value; }
+		}
+
+		private static void Init()
+		{
+			_instance = FindObjectOfType<T>();
+			if (_instance == null)
+			{
+				Debug.LogError("NULL");
+			}
 		}
 	}
 }

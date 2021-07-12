@@ -231,7 +231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2031.4341, y: -540}
+  m_AnchoredPosition: {x: 1776.434, y: -540}
   m_SizeDelta: {x: 488.3719, y: 503.8759}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159514006
@@ -1032,7 +1032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 501.43408, y: -540}
+  m_AnchoredPosition: {x: 416.43408, y: -540}
   m_SizeDelta: {x: 434.1083, y: 503.8759}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &451456035
@@ -2263,7 +2263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593df3fc43510364bb1881f5a5f686de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsDetails:
+  _spawnPointsDetails:
   - {fileID: 1175056030}
   - {fileID: 700783805}
   - {fileID: 1231357732}
@@ -2287,7 +2287,6 @@ MonoBehaviour:
   - {fileID: -3471151342835104145, guid: f0b0a18b78fd4484596e84c5d89c3c4e, type: 3}
   - {fileID: -271104238400305747, guid: b06f1dd2b11094a499094371df9cc3c4, type: 3}
   _parent: {fileID: 1043277290}
-  _collisionBoundary: 0.1
 --- !u!1 &978555680
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,9 +2662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42834764f6f55f34e9e45957b7c60f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0.814
-  moveSpeedDrop: 0.476
-  moveSpeedConveyor: 2
+  _rotationSpeed: 0.814
+  _moveSpeedConveyor: 2
   _conveyor: {fileID: 1043277290}
   _stars: {fileID: 8908106174582399781, guid: 6d899ebf640cc3f479df46869a99d4b5, type: 3}
   _starsParent: {fileID: 978555681}
